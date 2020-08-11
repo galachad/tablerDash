@@ -76,6 +76,11 @@ shiny::shinyApp(
           tabName = "Test",
           icon = "box",
           "Test"
+        ),
+        tablerNavMenuItem(
+          tabName = "Test2",
+          icon = "box",
+          "Test2"
         )
       ),
       tablerDropdown(
@@ -160,6 +165,10 @@ shiny::shinyApp(
               uiOutput("info")
             )
           )
+        ),
+        tablerTabItem(
+          tabName = "Test2",
+          tablerTabsetPanel(tablerTabsetItem("Info", "123", title_header = "Very important info tab"), tablerTabsetItem("Boo", "content"))
         ),
         tablerTabItem(
           tabName = "Test",
